@@ -14,9 +14,6 @@ Trade with any of the leading Forex brokers we are partnered with. Get immediate
 #### Strategic Partners
 Our brokers and education partners have goals consistentand aligned with yours. We want you to succeed. 
 
-#### Technology
-Trade using established platforms such as Metrader, cTrader and Trading Station. Want them automated? Let our expert developers code your next MT4 Expert Advisor or Lua strategy for Marketscope charts in TS2. 
-
 #### Availability
 We are here to help. Our large team of support personnel will assist you with all your trading needs. 
 
@@ -25,6 +22,46 @@ Expect a high quality of service from dedicated and highly skilled professionals
 
 #### Cost
 Our prices are guaranteed to be competitive. We will work with you to satisfy your pricing requirements.
+
+#### Technology
+Trade using established platforms such as Metrader, cTrader and Trading Station. Want them automated? Let our expert developers code your next MT4 Expert Advisor or Lua strategy for Marketscope charts in TS2. 
+
+##### Sample Code Snippet
+
+```lua
+--[[
+Simple signal/slot implementation
+]]
+local signal_mt = {
+    __index = {
+        register = table.insert
+    }
+}
+function signal_mt.__index:emit(... --[[ Comment in params ]])
+    for _, slot in ipairs(self) do
+        slot(self, ...)
+    end
+end
+local function create_signal()
+    return setmetatable({}, signal_mt)
+end
+
+-- Signal test
+local signal = create_signal()
+signal:register(function(signal, ...)
+    print(...)
+end)
+signal:emit('Answer to Life, the Universe, and Everything:', 42)
+
+--[==[ [=[ [[
+Nested ]]
+multi-line ]=]
+comment ]==]
+[==[ Nested
+[=[ multi-line
+[[ string
+]] ]=] ]==]
+```
 
 ### Site Index
 * [OQT Trading Technology website](https://www.oqtradetech.com)
