@@ -32,8 +32,8 @@ Trade using established platforms such as Metrader, cTrader and Trading Station.
 - [MetaTrader 4](https://github.com/oq-trade-tech/about_us#mq4)
 - [cTrader](https://github.com/oq-trade-tech/about_us#cTrader)
 
-#### Trading Station
-..* Lua sample code
+#### Trading Station II
+  * Lua sample code
 
 ```lua
 function addOrderAlert(orderID, key, data)
