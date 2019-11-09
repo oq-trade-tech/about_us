@@ -28,11 +28,11 @@ Trade using established platforms such as Metrader, cTrader and Trading Station.
 
 ##### Sample Code Snippets
 
-- [Trading Station II](https://github.com/oq-trade-tech/about_us#Trading Station II)
-- [MetaTrader 4](https://github.com/oq-trade-tech/about_us#mq4)
+- [Trading Station II](https://github.com/oq-trade-tech/about_us#TS2-lua)
+- [MetaTrader 4](https://github.com/oq-trade-tech/about_us#MT4-mq4)
 - [cTrader](https://github.com/oq-trade-tech/about_us#cTrader)
 
-#### Trading Station II
+#### TS2-lua
   * Lua sample code
 
 ```lua
@@ -59,7 +59,7 @@ function sendAlerts()
 	alertsTrade = {};
 end
 ```
-#### Mq4
+#### MT4-mq4
 
 ```lua
 --[[
