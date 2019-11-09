@@ -28,47 +28,37 @@ Trade using established platforms such as Metrader, cTrader and Trading Station.
 
 ##### Sample Code Snippets
 
-- [Trading Station II - Lua](https://github.com/oq-trade-tech/about_us#Lua)
+- [Trading Station II](https://github.com/oq-trade-tech/about_us#Trading Station II)
 - [MetaTrader 4](https://github.com/oq-trade-tech/about_us#mq4)
 - [cTrader](https://github.com/oq-trade-tech/about_us#cTrader)
 
-#### Lua
+#### Trading Station
+..* Lua sample code
 
 ```lua
---[[
-Simple signal/slot implementation
-]]
-local signal_mt = {
-    __index = {
-        register = table.insert
-    }
-}
-function signal_mt.__index:emit(... --[[ Comment in params ]])
-    for _, slot in ipairs(self) do
-        slot(self, ...)
-    end
-end
-local function create_signal()
-    return setmetatable({}, signal_mt)
+function addOrderAlert(orderID, key, data)
+	if not containsKey(alertsOrder, orderID) then
+		alertsOrder[orderID] = {};
+	end
+	alertsOrder[orderID][key] = data;
 end
 
--- Signal test
-local signal = create_signal()
-signal:register(function(signal, ...)
-    print(...)
-end)
-signal:emit('Answer to Life, the Universe, and Everything:', 42)
+function addTradeAlert(tradeID, key, data)
+	if not containsKey(alertsTrade, tradeID) then
+		alertsTrade[tradeID] = {};
+	end
+	alertsTrade[tradeID][key] = data;
+end
 
---[==[ [=[ [[
-Nested ]]
-multi-line ]=]
-comment ]==]
-[==[ Nested
-[=[ multi-line
-[[ string
-]] ]=] ]==]
+function sendAlerts()
+	local messages = formatAlerts();
+	if instance.parameters.advanced_alert_key ~= "" and instance.parameters.use_advanced_alert then
+		sendTelegram(messages);
+	end
+	alertsOrder = {};
+	alertsTrade = {};
+end
 ```
-
 #### Mq4
 
 ```lua
@@ -106,7 +96,7 @@ comment ]==]
 ]] ]=] ]==]
 ```
 
-#### C#
+#### cTrader
 
 ```lua
 --[[
