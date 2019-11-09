@@ -1,6 +1,4 @@
-<p align="center">
-![](oqt_english_logo.png)
-</p>
+<p align="center"><img src="oqt_english_logo.png"></p>
 
 ## OQ Trading Technology
 Headquartered in Brooklyn, New York, OQ Trading Technology is a diverse group of professionals that specializes in connecting traders to the right technology and the right platforms. We use our years of experience in creating complex trading systems to offer unique solutions and customizable software while delivering the highest levels of customer satisfaction.
