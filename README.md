@@ -1,4 +1,6 @@
+<p align="center">
 ![](oqt_english_logo.png)
+</p>
 
 ## OQ Trading Technology
 Headquartered in Brooklyn, New York, OQ Trading Technology is a diverse group of professionals that specializes in connecting traders to the right technology and the right platforms. We use our years of experience in creating complex trading systems to offer unique solutions and customizable software while delivering the highest levels of customer satisfaction.
@@ -26,7 +28,7 @@ Our prices are guaranteed to be competitive. We will work with you to satisfy yo
 #### Technology
 Trade using established platforms such as Metrader, cTrader and Trading Station. Want them automated? Let our expert developers code your next MT4 Expert Advisor or Lua strategy for Marketscope charts in TS2. 
 
-##### Sample Code Snippet
+##### Sample Code Snippets
 
 ```lua
 --[[
