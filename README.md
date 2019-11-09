@@ -60,77 +60,43 @@ function sendAlerts()
 end
 ```
 #### MT4-mq4
+  * MetaTrader 4 mq4 sample code
 
 ```lua
---[[
-Simple signal/slot implementation
-]]
-local signal_mt = {
-    __index = {
-        register = table.insert
-    }
-}
-function signal_mt.__index:emit(... --[[ Comment in params ]])
-    for _, slot in ipairs(self) do
-        slot(self, ...)
-    end
-end
-local function create_signal()
-    return setmetatable({}, signal_mt)
-end
-
--- Signal test
-local signal = create_signal()
-signal:register(function(signal, ...)
-    print(...)
-end)
-signal:emit('Answer to Life, the Universe, and Everything:', 42)
-
---[==[ [=[ [[
-Nested ]]
-multi-line ]=]
-comment ]==]
-[==[ Nested
-[=[ multi-line
-[[ string
-]] ]=] ]==]
+   for(int i = 0; i < 5; i++) {
+      if(Wr[i] >= -20){
+         DownArrow(40 * i + pix + 50, 120, n);
+      }
+      if(Wr[i] <= -80){
+         UpArrow(40 * i + pix + 50, 120, n);
+      }
+      if((Wr[i] < -20) && (Wr[i] > -80)){
+         RightArrow(40 * i + pix + 50, 120, n);
+      }
+      n++; 
+   }
 ```
 
 #### cTrader
+  * C# for cTrader
 
-```lua
---[[
-Simple signal/slot implementation
-]]
-local signal_mt = {
-    __index = {
-        register = table.insert
-    }
-}
-function signal_mt.__index:emit(... --[[ Comment in params ]])
-    for _, slot in ipairs(self) do
-        slot(self, ...)
-    end
-end
-local function create_signal()
-    return setmetatable({}, signal_mt)
-end
-
--- Signal test
-local signal = create_signal()
-signal:register(function(signal, ...)
-    print(...)
-end)
-signal:emit('Answer to Life, the Universe, and Everything:', 42)
-
---[==[ [=[ [[
-Nested ]]
-multi-line ]=]
-comment ]==]
-[==[ Nested
-[=[ multi-line
-[[ string
-]] ]=] ]==]
+```C#
+	{ 
+		if (TimeFrame <= TimeFrame.Hour)
+    		PivotTimeFrame = TimeFrame.Daily;
+    		else if (TimeFrame < TimeFrame.Daily)
+    		{
+    			PivotTimeFrame = TimeFrame.Weekly;
+    		}
+    		else
+    			PivotTimeFrame = TimeFrame.Monthly;
+ 
+ 
+    		Enum.TryParse(PivotColor, out pivotColor);
+    		Enum.TryParse(SupportColor, out supportColor);
+    		Enum.TryParse(ResistanceColor, out resistanceColor);
+ 
+ 	}
 ```
 
 ### Site Index
