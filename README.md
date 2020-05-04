@@ -12,7 +12,7 @@ Our team specializes in creating or tailoring software to meet your specific tra
 Trade with any of the leading Forex brokers we are partnered with. Get immediate access to a huge range of products with several hundred currency pairs and CFDs to choose from. 
 
 ### Strategic Partners
-Our brokers and education partners have goals consistentand aligned with yours. We want you to succeed. 
+Our brokers and education partners have goals consistent and aligned with yours. We want you to succeed. 
 
 ### Availability
 We are here to help. Our large team of support personnel will assist you with all your trading needs. 
